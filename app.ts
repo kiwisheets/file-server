@@ -32,11 +32,14 @@ app.use((req, res, next) => {
 
 app.use((req) => {
   // log the error
-  console.log(req.ip);
+  // console.log(req.ip);
 });
 
-app.listen(port, () => {
-  console.log(`⚡️[server]: Server is running at https://localhost:${port}`);
+const server = app.listen(port, () => {
+  // console.log(`⚡️[server]: Server is running at https://localhost:${port}`);
 });
 
-module.exports = app;
+export {
+  app,
+  server,
+};
